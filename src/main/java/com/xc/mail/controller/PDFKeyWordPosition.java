@@ -35,7 +35,7 @@ public class PDFKeyWordPosition extends PDFTextStripper {
     }
 
     @Override
-    protected void writeString(String string, List<TextPosition> textPositions) throws IOException {
+    protected void writeString(String string, List<TextPosition> textPositions) {
         for (String keyword : keywordList) {
             Integer foundIndex = 0;
             List<Position> positionList = positionListMap.computeIfAbsent(keyword, k -> new ArrayList<>());

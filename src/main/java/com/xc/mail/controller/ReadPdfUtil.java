@@ -311,7 +311,7 @@ public class ReadPdfUtil {
                     detail.setAmount(itemArray[itemArray.length - 3]);
                     String taxRate = itemArray[itemArray.length - 2];
                     if (taxRate.indexOf("免税") > 0 || taxRate.indexOf("不征税") > 0 || taxRate.indexOf("出口零税率") > 0
-                            || taxRate.indexOf("普通零税率") > 0 || taxRate.indexOf("%") < 0) {
+                            || taxRate.indexOf("普通零税率") > 0 || !taxRate.contains("%")) {
                         detail.setTaxRate("0");
                         detail.setTaxAmount("0");
                     } else {
