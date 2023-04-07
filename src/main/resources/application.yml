@@ -1,0 +1,19 @@
+logging:
+  level:
+    root: info
+  config: classpath:spring-log4j2.xml
+server:
+  servlet:
+    context-path: /log
+    session:
+      timeout: 60
+  port: 8088
+  address: 192.168.2.115
+  tomcat:
+    threads:
+      max: 100
+    uri-encoding: UTF-8
+spring:
+  jackson:
+    date-format: java.text.SimpleDateFormat
+    time-zone: Asia/Chongqing
