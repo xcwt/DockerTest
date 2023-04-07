@@ -20,7 +20,6 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello(@RequestBody User user){
        // logger.debug("日志开始打印");
-        System.out.println(user.toString());
         logger.info("日志开始");
         logger.info("user:{}", user);
         return "Hello Docker";
